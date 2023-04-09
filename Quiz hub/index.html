@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <meta charset="UTF-8" />
-     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Quiz App</title>
-     <!-- FontAwesome CDN Link for Icons-->
-    
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-     <link rel="stylesheet" href="./style.css">    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <!-- FontAwesome CDN Link for Icons-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
@@ -61,25 +64,25 @@
         <div class="total-que">
           <!-- here i've inserted questions count number from JS -->
         </div>
-        <button class="next-btn"> Next Que</button>
+        <button class="next-btn">Next Que</button>
       </footer>
     </div>
 
-
     <!-- Result Box-->
     <div class="result-box">
-        <div class="result-box">
-            <div class="icon">
-                <i class="fas fa-crown"></i>
-            </div>
-            <div class="complete-text">You've completed the Quiz!</div>
-            <div class="score-text">
-                <!-- Here i've inserted Score Results From JS -->
-            </div>
-            <div class = "buttons"> Replay Quiz</div>
-            <div class="quit"> Quit Quiz</div>
-        </div>
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete-text">You've completed the Quiz!</div>
+      <div class="score-text">
+        <!-- Here i've inserted Score Results From JS -->
+      </div>
+      <div class="buttons">
+        <button class="restar">Replay Quiz</button>
+        <button class="quit">Quit Quiz</button>
+      </div>
     </div>
+    <script src="./myscripts.js/questions.js"></script>
+    <script src="./myscripts.js/script.js"></script>
   </body>
-  <script src="myscripts.js"></script>
 </html>

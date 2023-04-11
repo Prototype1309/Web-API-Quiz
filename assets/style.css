@@ -24,11 +24,8 @@ main{
     justify-content: space-around;
     align-items: center;
     margin: 40px 0;
-
-   
-   
-
-    
+    display: none;
+  
 }
 
 section { 
@@ -52,13 +49,17 @@ section:hover {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+.head .text{
+    font-size: 1rem;
+}
    
 
 
-}
+
 h3 { color: black; 
     font-family: 'monospace','Source Sans Pro', sans-serif; 
-    font-size: 50px; 
+    font-size: 35px; 
     font-style: oblique;
     font-weight: bold; 
     line-height: 32px; 
@@ -83,7 +84,7 @@ p1 { color: #4c4a37;
 
 
 q { font-family: "monospace", "Source Sans Pro", "arial", sans-serif;
-    font-size: 1.7rem;
+    font-size: 1rem;
 }
 
 

@@ -2,294 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
-    <title>Web API Quiz!</title>
+    <title>Quiz App</title>
+    <!-- FontAwesome CDN Link for Icons-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <header id="header" class="message">
-      <div id="high-score"><h2>High score:</h2></div>
-      <div id="score">
-        <h2>Count:</h2>
-        <p></p>
-      </div>
-    </header>
-
-    <main>
-      <head class="quiz_head">
-        <h1>Coding Quiz Challenge</h1>
-        <p1 class="text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga beatae
-          eveniet tenetur alias provident hic harum, excepturi dolorem
-          consequuntur vitae. Explicabo, aut ut soluta reprehenderit error sed?
-          Fugit, quis fuga.
-        </p1>
-        <div class="buttons">
-          <button type="button" id="button">Start Quiz!</button>
+    <div class="start_btn"><button>Start Quiz</button></div>
+    <div class="info_box">
+      <div class="info-title"><span>Rules of this Quiz:</span></div>
+      <div class="info-list">
+        <div class="info">
+          1. You will have only <span>15 seconds</span> per each question.
         </div>
-      </head>
-
-      <div class="container" id="questions">
-        <h3>1. What does HTML stand for?</h3>
-        <p>Choose your answer below:</p>
-        <hr />
-        <section id="answer-11">
-          <label for="option-11">
-            <input
-              type="radio"
-              name="option"
-              value="Home Tool Markup Language."
-              id="option-11"
-            /><q> Home Tool Markup Language. </q>
-          </label>
-          <span id="result-11"></span>
-          <hr />
-        </section>
-
-        <section id="answer-12">
-          <label for="option-12">
-            <input
-              type="radio"
-              name="option"
-              value="Hyprtlinks and Text Markup Language."
-              id="option-12"
-            /><q> Hyper Text Markup Language. </q>
-          </label>
-          <span id="results-12"></span>
-          <hr />
-        </section>
-
-        <section id="answer-13">
-          <label for="option-13">
-            <input
-              type="radio"
-              name="option"
-              value="Hyper Text Markup Language."
-              id="option-13"
-            /><q>Hypertlinks and Text Markup Language. </q>
-          </label>
-          <span id="results-13"></span>
-          <hr />
-        </section>
-
-        <section id="answer-14">
-          <label for="option-14">
-            <input
-              type="radio"
-              name="option"
-              value="Hyper Text and Markup Language."
-              id="option-14"
-            /><q> Home Tool Markup Language.</q>
-          </label>
-          <span id="results-14"></span>
-          <hr />
-        </section>
-        <button type="button" onclick="displayAnswer1()">Submit</button>
-        <a id="showanswer1"></a>
-      </div>
-
-      <div class="container">
-        <h3>2. How can you create an e-mail link?</h3>
-        <p>Choose your answer below:</p>
-        <hr />
-
-        <section id="answer-21">
-          <label for="option-21">
-            <input type="radio" name="option" value="3" id="option-21" /><q>
-              Kas
-            </q>
-          </label>
-          <span id="result-21"></span>
-          <hr />
-        </section>
-
-        <section id="answer-22">
-          <label for="option-22">
-            <input type="radio" name="option" value="3" id="option-22" /><q>
-              Csa
-            </q>
-          </label>
-          <span id="result-22"></span>
-          <hr />
-        </section>
-
-        <section id="answer-23">
-          <label for="option-23">
-            <input type="radio" name="option" value="3" id="option-23" /><q>
-              Xxx@yyy
-            </q>
-          </label>
-          <span id="result-23"></span>
-          <hr />
-        </section>
-
-        <section id="answer-24">
-          <label for="option-21">
-            <input type="radio" name="option" value="3" id="option-24" /><q>
-              Cas
-            </q>
-          </label>
-          <span id="result-24"></span>
-          <hr />
-        </section>
-        <button type="button" onclick="displayAnswer2()">Submit</button>
-        <a id="showanswer2"></a>
-      </div>
-
-      <div class="container">
-        <h3>3. How can you open a link in a new browser window</h3>
-        <p>Choose your answer below:</p>
-        <hr />
-
-        <section id="answer-31">
-          <label for="option-31">
-            <input type="radio" name="option" value="4" id="option-31" /><q>
-              _blank
-            </q>
-          </label>
-          <span id="result-31"></span>
-          <hr />
-        </section>
-
-        <section id="answer-32">
-          <label for="option-32">
-            <input type="radio" name="option" value="4" id="option-32" /><q>
-              Target
-            </q>
-          </label>
-          <span id="result-32"></span>
-          <hr />
-        </section>
-
-        <section id="answer-33">
-          <label for="option-33">
-            <input type="radio" name="option" value="4" id="option-33" /><q>
-              Same
-            </q>
-          </label>
-          <span id="result-33"></span>
-          <hr />
-        </section>
-
-        <section id="answer-34">
-          <label for="option-34">
-            <input type="radio" name="option" value="4" id="option-34" /><q>
-              open
-            </q>
-          </label>
-          <span id="result-34"></span>
-          <hr />
-        </section>
-        <button type="button" onclick="displayAnswer3()">Submit</button>
-        <a id="showanswer3"></a>
-      </div>
-
-      <div class="container">
-        <h3>4. Inside which HTML element do we put the JavaScript?</h3>
-        <p>Choose your answer below:</p>
-        <hr />
-
-        <section id="answer-41">
-          <label for="option-41">
-            <input type="radio" name="option" value="5" id="option-41" />
-            <q> js </q>
-          </label>
-          <span id="result-41"></span>
-          <hr />
-        </section>
-
-        <section id="answer-42">
-          <label for="option-42">
-            <input type="radio" name="option" value="4" id="option-42" />
-            <q> scripting </q>
-          </label>
-          <span id="result-42"></span>
-          <hr />
-        </section>
-
-        <section id="answer-43">
-          <label for="option-43">
-            <input type="radio" name="option" value="4" id="option-43" />
-            <q> javascript </q>
-          </label>
-          <span id="result-43"></span>
-          <hr />
-        </section>
-
-        <section id="answer-44">
-          <label for="option-44">
-            <input type="radio" name="option" value="4" id="option-44" />
-            <q> script </q>
-          </label>
-          <span id="result-44"></span>
-          <hr />
-        </section>
-        <button type="button" onclick="displayAnswer4()">Submit</button>
-        <a id="showanswer4"></a>
-      </div>
-
-      <div class="container">
-        <h3>5. Where is the correct place to insert a JavaScript?</h3>
-        <p>Choose your answer below:</p>
-        <hr />
-
-        <section id="answer-51">
-          <label for="option-51">
-            <input type="radio" name="option" value="6" id="option-51" />
-            <q> 4454646512 </q>
-          </label>
-          <span id="result-51"></span>
-          <hr />
-        </section>
-
-        <section id="answer-52">
-          <label for="option-52">
-            <input type="radio" name="option" value="6" id="option-52" />
-            <q> 4454646512 </q>
-          </label>
-          <span id="result-52"></span>
-          <hr />
-        </section>
-
-        <section id="answer-53">
-          <label for="option-53">
-            <input type="radio" name="option" value="6" id="option-53" />
-            <q> 4454646512 </q>
-          </label>
-          <span id="result-53"></span>
-          <hr />
-        </section>
-
-        <section id="answer-54">
-          <label for="option-54">
-            <input type="radio" name="option" value="6" id="option-54" />
-            <q> 4454646512 </q>
-          </label>
-          <span id="result-54"></span>
-          <hr />
-        </section>
-        <button type="button" onclick="displayAnswer5()">Submit</button>
-        <a id="showanswer5"></a>
-
-        <div id="timer">
-          <p>Quiz ends in:</p>
-          <div class="timer-container">
-            <span id="seconds">15 seconds</span>
-          </div>
+        <div class="info">
+          2. Once you select your question it can't be undone.
         </div>
-
-        <footer>
-          <div class="buttons">
-            <button class="restart">Replay Quiz</button>
-            <button class="quit">Quit Quiz</button>
-          </div>
-        </footer>
+        <div class="info">
+          3. You can't select any options once time goes off.
+        </div>
+        <div class="info">
+          4. You can't exit from the Quiz while you're playing.
+        </div>
+        <div class="info">
+          5. You'll het point on the basis of your correct answers.
+        </div>
       </div>
-    </main>
+      <div class="buttons">
+        <button class="quit">Exit Quiz</button>
+        <button class="restart">Continue</button>
+      </div>
+    </div>
+    <div class="quiz_box">
+      <header>
+        <div class="title">Awesome Quiz Application</div>
+        <div class="timer">
+          <div class="time_left_txt">Time left</div>
+          <div class="timer_sec">15</div>
+        </div>
+        <div class="time_line"></div>
+      </header>
+
+      <section>
+        <div class="que_text">
+          <!--Here i have inserted questions from JS-->
+        </div>
+        <div class="option_list">
+          <!-- Here is the potion list from JS-->
+        </div>
+      </section>
+
+      <!-- Footer for Quiz box-->
+      <footer>
+        <div class="total_que">
+          <!-- here i've inserted questions count number from JS -->
+        </div>
+        <button class="next_btn">Next Que</button>
+      </footer>
+    </div>
+
+    <!-- Result Box-->
+    <div class="result_box">
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="score_text">
+        <!-- Here i've inserted Score Results From JS -->
+      </div>
+      <div class="buttons">
+        <button class="restart">Replay Quiz</button>
+        <button class="quit">Quit Quiz</button>
+      </div>
+    </div>
+    <script src="./myscripts.js/questions.js"></script>
+    <script src="./myscripts.js/script.js"></script>
+    
   </body>
 
-  <script type="text/javascript" src="./assets/jquery.js"></script>
-
-  <script src="./assets/script.js"></script>
 </html>

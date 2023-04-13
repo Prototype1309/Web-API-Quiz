@@ -35,4 +35,4 @@ This is a multiple-choice quiz web application designed purely for entertainment
 
 ### Screenshot
 
-![Quizrulesscreenshot] (./WebAPI.png)
+![Quizrulesscreenshot] (./myscript.js/WebAPI.png)

@@ -33,6 +33,12 @@ This is a multiple-choice quiz web application designed purely for entertainment
 
 
 
-### Screenshot
+### Quiz start menu Screenshot
 
-![Quizrulesscreenshot] (./myscript.js/WebAPI.png)
+![Quiz start menu screenshot](myscripts.js/Quiz%20start%20menu%20screenshot.png)
+
+
+
+### Quiz rules
+
+![Quiz Rules](myscripts.js/WebAPI.png)

@@ -2,11 +2,9 @@
 
 ## Description
 
-For this challenge, I was tasked with assembling and finish the codebase of a Quiz webpage.
+This is a multiple-choice quiz web application designed purely for entertainment purposes. The quiz begins when the 'Start Quiz' button is clicked and consists of 5 randomly selected questions on a variety of topics to be answered within 15 seconds. When all questions are answered, or the time is up, users will receive a score out of 5 and can choose to save their score and initials for future reference.
 
 ### Acceptance Criteria
-
-```
 
 * WHEN I click the start button THEN a timer starts and I am presented with a question
 * WHEN I answer a question THEN I am presented with another question
@@ -15,19 +13,26 @@ For this challenge, I was tasked with assembling and finish the codebase of a Qu
 * WHEN the game is over THEN I can save my initials and my score
 
 
-```
 
-### Work Completed 
 
-* Refactored HTML to add botton "confirm selection" 
-* Refactored HTML to add input selected checkbox 
-* Labeled each box according to crieria given by the client
-* Optimized the criteria selection to be easily selected
-* Optimized the "Generate Password" button by adding "hidden" feature after click.
-* Adding a second "Confirm Selection" botton to confirm the selection choosen by the client
-* Added a "Hidden" feature to "Confirm Selection" after being clicked
-* Added some CSS styling to the checkboxes
-* Refactored JS to meet the client's demands
+## List of technologies used
+
+- JavaScript
+- localStorage 
+- HTML
+- CSS 
+- Google Fonts
+- Font Awesome 
+
+
+
+### Quiz Website Link:
+
+
+
+
+
+
 ### Screenshot
 
-![People standing around table.]
+![Quizrulesscreenshot] (./WebAPI.png)

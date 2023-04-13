@@ -30,4 +30,4 @@ For this challenge, I was tasked with assembling and finish the codebase of a Qu
 * Refactored JS to meet the client's demands
 ### Screenshot
 
-![People standing around table.](passworg-generator-screenshot.png)
+![People standing around table.]

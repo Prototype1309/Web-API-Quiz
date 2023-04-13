@@ -9,7 +9,7 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-
+const inName = document.querySelector("#inName");
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
@@ -121,14 +121,15 @@ function optionSelected(answer){
     const allOptions = option_list.children.length; //getting all option items
     
     if(userAns == correcAns){ //if user selected option is equal to array's correct answer
-        userScore += 1; //upgrading score value with 1
+        userScore += 1; //upgrading score value with 0
         answer.classList.add("correct"); //adding green color to correct selected option
         answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
         console.log("Correct Answer");
         console.log("Your correct answers = " + userScore);
     }else{
-        answer.classList.add("incorrect"); //adding red color to correct selected option
-        answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
+        answer.classList.add("incorrect"); //adding red color to incorrect selected option
+        timeValue -= 3;
+        answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to incorrect selected option
         console.log("Wrong Answer");
 
         for(i=0; i < allOptions; i++){
@@ -145,6 +146,26 @@ function optionSelected(answer){
     next_btn.classList.add("show"); //show the next button if user selected any option
 }
 
+    // vreat a new input selector
+    initText = document.createElement("input"); 
+    initText.setAttribute("id", "initials-input"); 
+    initText.setAttribute("type", "text"); 
+    initText.setAttribute("name", "initials"); 
+    initText.setAttribute("placeholder", "Enter initials here");  
+    inName.appendChild(initText);
+
+    // create save button elemetn
+    saveButtonEl = document.createElement("button");
+    saveButtonEl.setAttribute("id" , "save-btn");
+    saveButtonEl.setAttribute("class" ,"save-btn");
+    saveButtonEl.setAttribute("type" , "submit");
+    saveButtonEl.textContent = "Save Score";
+    inName.appendChild(saveButtonEl);
+    inName.addEventListener("submit", showResult);
+
+
+ // showing results with the initials bar 
+
 function showResult(){
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
@@ -152,7 +173,7 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>and congrats 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
     else if(userScore > 1){ // if user scored more than 1
@@ -164,7 +185,7 @@ function showResult(){
         scoreText.innerHTML = scoreTag;
     }
 }
-
+ 
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){
@@ -180,11 +201,12 @@ function startTimer(time){
             const allOptions = option_list.children.length; //getting all option items
             let correcAns = questions[que_count].answer; //getting correct answer from array
             for(i=0; i < allOptions; i++){
-                if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer
+                if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer         
                     option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
                     option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
                     console.log("Time Off: Auto selected correct answer.");
                 }
+            
             }
             for(i=0; i < allOptions; i++){
                 option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
